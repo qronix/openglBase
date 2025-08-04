@@ -16,7 +16,8 @@ add_library(glad STATIC external/glad/src/glad.c)
 include_directories(${GLFW_INCLUDE_DIR})
 link_directories(${GLFW_LIBRARY_DIR})
 target_include_directories(glad PUBLIC external/glad/include)
-add_executable(LearnOpenGL main.cpp)
+add_executable(LearnOpenGL main.cpp
+        shader.h)
 
 #Link GLFW
 target_link_libraries(LearnOpenGL PRIVATE glad glfw3 opengl32 )
